@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=BoxBall
+comment0.text=\n\ Class\ BoxBall\ -\ a\ graphical\ ball\ that\ bounces\ each\ time\ it\ contacts\ an\ edge.\n\ The\ ball\ has\ the\ ability\ to\ move.\ \n\ Details\ of\ movement\ are\ determined\ by\ the\ ball\ itself.\n\ When\ ball\ hits\ an\ object\ it\ will\ bounce\ back\ at\ an\ angle\n\n\ This\ movement\ can\ be\ initiated\ by\ repeated\ calls\ to\ the\ "move"\ method.\n\ \n\ @author\ Matthew\ Sheehan\n\n\ @version\ 03-01-2020\n
+comment1.params=xPosit\ yPosit\ ballDiameter\ drawingCanvas
+comment1.target=BoxBall(int,\ int,\ int,\ Canvas)
+comment1.text=\n\ Constructor\ for\ BoxBall\n\ @param\ xPos\ \ the\ horizontal\ coordinate\ of\ the\ ball\n\ @param\ yPos\ \ the\ vertical\ coordinate\ of\ the\ ball\n\ @param\ ballDiameter\ \ the\ diameter\ (in\ pixels)\ of\ the\ ball\ \ \ \ \ \n\ @param\ drawingCanvas\ \ the\ canvas\ to\ draw\ this\ ball\ on\n\ \n
+comment2.params=
+comment2.target=void\ erase()
+comment2.text=\n\ Method\ to\ erase\ ball\ at\ its\ current\ position.\n
+comment3.params=
+comment3.target=void\ draw()
+comment3.text=\n\ Method\ to\ draw\ ball\ at\ its\ current\ position\ onto\ the\ canvas.\n
+comment4.params=
+comment4.target=void\ move()
+comment4.text=\n\ Method\ for\ moving\ the\ ball\n\ when\ a\ boundary\ is\ hit,\ speed\ and\ direction\ change.\n
+comment5.params=
+comment5.target=int\ getXPosition()
+comment5.text=\n\ Method\ that\ returns\ the\ horizontal\ position\ of\ the\ ball\n
+comment6.params=
+comment6.target=int\ getyPosition()
+comment6.text=\n\ Method\ that\ returns\ the\ vertical\ position\ of\ the\ ball\n
+numComments=7
