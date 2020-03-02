@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=BoxBall
 comment0.text=\n\ Class\ BoxBall\ -\ a\ graphical\ ball\ that\ bounces\ each\ time\ it\ contacts\ an\ edge.\n\ The\ ball\ has\ the\ ability\ to\ move.\ \n\ Details\ of\ movement\ are\ determined\ by\ the\ ball\ itself.\n\ When\ ball\ hits\ an\ object\ it\ will\ bounce\ back\ at\ an\ angle\n\n\ This\ movement\ can\ be\ initiated\ by\ repeated\ calls\ to\ the\ "move"\ method.\n\ \n\ @author\ Matthew\ Sheehan\n\n\ @version\ 03-01-2020\n
-comment1.params=xPosit\ yPosit\ ballDiameter\ drawingCanvas
-comment1.target=BoxBall(int,\ int,\ int,\ Canvas)
-comment1.text=\n\ Constructor\ for\ BoxBall\n\ @param\ xPos\ \ the\ horizontal\ coordinate\ of\ the\ ball\n\ @param\ yPos\ \ the\ vertical\ coordinate\ of\ the\ ball\n\ @param\ ballDiameter\ \ the\ diameter\ (in\ pixels)\ of\ the\ ball\ \ \ \ \ \n\ @param\ drawingCanvas\ \ the\ canvas\ to\ draw\ this\ ball\ on\n\ \n
+comment1.params=xPosit\ yPosit\ ballDiameter\ drawingCanvas\ boxOffset
+comment1.target=BoxBall(int,\ int,\ int,\ Canvas,\ int)
+comment1.text=\n\ Constructor\ for\ BoxBall\n\ @param\ xPos\ \ the\ horizontal\ coordinate\ of\ the\ ball\n\ @param\ yPos\ \ the\ vertical\ coordinate\ of\ the\ ball\n\ @param\ ballDiameter\ \ the\ diameter\ (in\ pixels)\ of\ the\ ball\ \ \ \ \ \n\ @param\ drawingCanvas\ \ the\ canvas\ to\ draw\ this\ ball\ on\n\ @param\ boxOffset\ \ the\ box\ boundary\ for\ which\ to\ bounce\ off\ of\n
 comment2.params=
 comment2.target=void\ erase()
 comment2.text=\n\ Method\ to\ erase\ ball\ at\ its\ current\ position.\n

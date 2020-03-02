@@ -25,20 +25,22 @@ public class BoxBall
     private int xSpeed;                 
     private int ySpeed;                
     private Canvas canvas;
+    private int offset;
     /**
      * Constructor for BoxBall
      * @param xPos  the horizontal coordinate of the ball
      * @param yPos  the vertical coordinate of the ball
      * @param ballDiameter  the diameter (in pixels) of the ball     
      * @param drawingCanvas  the canvas to draw this ball on
-     * 
+     * @param boxOffset  the box boundary for which to bounce off of
      */
-    public BoxBall(int xPosit, int yPosit, int ballDiameter, Canvas drawingCanvas) 
+    public BoxBall(int xPosit, int yPosit, int ballDiameter, Canvas drawingCanvas, int boxOffset) 
     {
         xPosition = xPosit;
         yPosition = yPosit;
         Random random = new Random();
         diameter = ballDiameter;
+        offset = boxOffset;
         
         // randomize the speed and direction at which this ball travels about
         xSpeed = random.nextInt(7) +1;
@@ -85,20 +87,20 @@ public class BoxBall
         yPosition+=ySpeed; 
 
         // bounce in opposite direction when touching boundary
-        if (xPosition < 50) {
-            xPosition = diameter + 50;
+        if (xPosition < offset) {
+            xPosition = diameter + offset;
             xSpeed = -xSpeed;
         }
-        if (xPosition > 550-diameter) {
-            xPosition = 550 - diameter;
+        if (xPosition > (600-offset)-diameter ){
+            xPosition = ((600-offset)-diameter);
             xSpeed = -xSpeed;
         }
-        if (yPosition < 50) {
+        if (yPosition < offset) {
             yPosition = diameter + 50;
             ySpeed = -ySpeed;
         }
-        if (yPosition > 450-diameter) {
-            yPosition = 450 - diameter;
+        if (yPosition > (500-offset)-diameter) {
+            yPosition = ((500-offset)-diameter);
             ySpeed = -ySpeed;
         }
     

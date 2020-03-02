@@ -71,7 +71,7 @@ public class BallDemo
      * 
      * @param amtOfBall amount of Balls created
      */
-    public void boxBounce(int amtOfBalls ){
+    public void boxBounce(int amtOfBalls,int boxOffset ){
        myCanvas.erase();
        myCanvas.setVisible(true);
        Random random = new Random();
@@ -81,7 +81,7 @@ public class BallDemo
         for(int i = 0; i < amtOfBalls; i ++){
             BoxBall ball = new BoxBall( (random.nextInt(WIDTH-100)+50),
                 (random.nextInt(HEIGHT-100)+50), random.nextInt(15)+10,
-                myCanvas);
+                myCanvas, boxOffset);
             BoxBalls.add(ball);
             ball.draw();
         }
@@ -91,10 +91,10 @@ public class BallDemo
        while (!finished){
         //redraw box frame each iteration incase it gets clipped
         myCanvas.setForegroundColor(Color.BLACK);
-        myCanvas.drawLine(50, 50, 550, 50);   //top boundary
-        myCanvas.drawLine(550, 50, 550, 450);     //right boundary
-        myCanvas.drawLine(50, 450, 550, 450);     //bottom boundary
-        myCanvas.drawLine(50, 50, 50, 450);   //left boundary;
+        myCanvas.drawLine(boxOffset, boxOffset, WIDTH-boxOffset, boxOffset);   //top boundary
+        myCanvas.drawLine(WIDTH - boxOffset, boxOffset, WIDTH - boxOffset, HEIGHT-boxOffset);     //right boundary
+        myCanvas.drawLine(boxOffset, HEIGHT - boxOffset, WIDTH - boxOffset, HEIGHT - boxOffset);     //bottom boundary
+        myCanvas.drawLine(boxOffset, boxOffset, boxOffset, HEIGHT-boxOffset);   //left boundary;
        
         myCanvas.wait(50); //quick pause just in case drawing is sloppy
         // move balls going through the set a ball at a time.
