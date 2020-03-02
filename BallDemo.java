@@ -80,7 +80,7 @@ public class BallDemo
         //add user-defined amount of BouncingBall objects to HashSet Balls
         for(int i = 0; i < amtOfBalls; i ++){
             BoxBall ball = new BoxBall( (random.nextInt(WIDTH-100)+50),
-                (random.nextInt(HEIGHT-100)+50), random.nextInt(7)+10,
+                (random.nextInt(HEIGHT-100)+50), random.nextInt(12)+10,
                 myCanvas);
             BoxBalls.add(ball);
             ball.draw();
